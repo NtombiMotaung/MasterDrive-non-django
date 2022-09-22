@@ -5,14 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Services</title>
-    {% load static %}    
-<link rel="stylesheet" href="{% static 'css/style.css' %}">
+  
+<link rel="stylesheet" href="style.css">
 <link rel="icon" type="image/x-icon" href="{% static 'img/favicon.ico' %}">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
 <body>
     
-        {% include 'components/navbar.html' %}
+    <div class="topnav">
+        <a href="/"><i class="fa fa-fw fa-home"></i> Home</a>
+        <a href="services.html"><i class="fa fa-fw fa-wrench"></i> Services</a>
+        <a href="contacts.html"><i class="fa fa-fw fa-envelope"></i> Contacts</a>
+        <a href="gallery.html"><i class="fa fa-fw fa-envelope"></i> Gallery</a>
+      </div> 
         
     <section class="service" id="service">
         <div class="center">
@@ -121,6 +126,20 @@
         </div>
 
     </section>
-    {% include 'components/footer.html' %}
+    <footer>
+        <p class="logo">Driving <span>Masters</span></p>
+        <p class="logo"><span>Email: </span> info@drivingmasters.co.za
+        <br>
+        <span>Tel: </span> 0722779590
+        <br>
+        <span>Tel: </span> 0833072491
+        <br>
+        <span>Address: </span> Rietvlei Farm, 101 Swartkoppies Road, Alberton, 1448
+        </p>
+    
+        <p class="end"> CopyRight by Driving Masters</p>
+      
+      
+      </footer>
 </body>
 </html>
