@@ -8,15 +8,20 @@
   <title>Home</title>
 </head>
 <body>
- {% load static %}
+
   <link rel="stylesheet" href="style.css">
-  <link rel="icon" type="image/x-icon" href="{% static 'img/favicon.ico' %}">
+  <link rel="icon" type="image/x-icon" href="Gallery/favicon.ico">
   
 
  
  <div class="hero">
-   {% include 'components/navbar.html' %}
-   <img src="{{wp.image.url}}" alt="Snow"  style="float:right" width="600" height="600"  />
+    <div class="topnav">
+        <a href="/"><i class="fa fa-fw fa-home"></i> Home</a>
+        <a href="services.html"><i class="fa fa-fw fa-wrench"></i> Services</a>
+        <a href="contacts.html"><i class="fa fa-fw fa-envelope"></i> Contacts</a>
+        <a href="gallery.html"><i class="fa fa-fw fa-envelope"></i> Gallery</a>
+      </div> 
+   <img src="Gallery/_DSC9045.jpg" alt="Snow"  style="float:right" width="600" height="600"  />
    
 
    <div class="content">
@@ -31,7 +36,7 @@
 <!--About Section-->
  <section class="about">
    <div class="main">
-     <img src="{{bg.image.url}}" alt="Snow" >    
+     <img src="Gallery/i.jpg" alt="Snow" >    
        <div class="about-text">
          <h2>About Us</h2>
          <h5>Driving <span>Masters</span></h5>
@@ -42,7 +47,7 @@
            simulator training, refresher driver training and help with 
            learners license 
          </p>
-         <a class="button" href="{% url 'services:get-services-page' %}">Read More</a>
+         <a class="button" href="services.html">Read More</a>
 
      </div>
    </div>
@@ -67,7 +72,7 @@
          </p>
 
             <p style="text-align: center;">
-            <a class="button" href="{% url 'services:get-services-page' %}">Read More</a>
+            <a class="button" href="services.html">Read More</a>
              </p>
        </div>
      </div> 
@@ -83,7 +88,7 @@
          </p>
 
             <p style="text-align: center;">
-            <a class="button" href="{% url 'services:get-services-page' %}">Read More</a>
+            <a class="button" href="services.html">Read More</a>
              </p>
        </div>
      </div> 
@@ -99,7 +104,7 @@
          </p>
 
             <p style="text-align: center;">
-            <a class="button" href="{% url 'services:get-services-page' %}">Read More</a>
+            <a class="button" href="services.html">Read More</a>
              </p>
        </div>
      </div> 
@@ -111,12 +116,27 @@
  <!--Contacts Section-->
  <div class="contact-us">
    <p>Allow us to be at your service</p>
-   <a class="button-two" href="{% url 'contacts:get-contacts-page' %}">Contact Us</a>
+   <a class="button-two" href="contacts.html">Contact Us</a>
    
  </div>
 
 
- {% include 'components/footer.html' %}
+
 </body>
+<footer>
+    <p class="logo">Driving <span>Masters</span></p>
+    <p class="logo"><span>Email: </span> info@drivingmasters.co.za
+    <br>
+    <span>Tel: </span> 0722779590
+    <br>
+    <span>Tel: </span> 0833072491
+    <br>
+    <span>Address: </span> Rietvlei Farm, 101 Swartkoppies Road, Alberton, 1448
+    </p>
+
+    <p class="end"> CopyRight by Driving Masters</p>
+  
+  
+  </footer>
 
 </html>
