@@ -1,58 +1,64 @@
-{% include 'components/navbar.html' %}
-{% load static %}
-
-
-{% block styles %}
-<title>Gallery</title>
-<link rel="stylesheet" href="{% static 'css/style.css' %}">
-<link rel="icon" type="image/x-icon" href="{% static 'img/favicon.ico' %}">
-<!-- <link rel="stylesheet" href="{% static 'js/style.js' %}"> -->
-
-<style>
-   body {
-  background-color: #000;
-  background-repeat: no-repeat;
-  background-size: 100% 100%;      
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-</style>
-{% endblock %}
+  <title>Gallery</title>
+</head>
+<style>
+    body {
+   background-color: #1f1e1e;
+   background-repeat: no-repeat;
+   background-size: 100% 100%;      
+ }
+   
+ </style>
+<body>
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/x-icon" href="Gallery/favicon.ico">
+  
+
+ 
+ <div class="hero">
+    <div class="topnav">
+        <a href="/"><i class="fa fa-fw fa-home"></i> Home</a>
+        <a href="services.html"><i class="fa fa-fw fa-wrench"></i> Services</a>
+        <a href="contacts.html"><i class="fa fa-fw fa-envelope"></i> Contacts</a>
+        <a href="gallery.html"><i class="fa fa-fw fa-envelope"></i> Gallery</a>
+      </div> 
+      <br>
+   
+      <div class="parent">
+        <div><img style="height: 300px; width: 410px; padding: 10px;" src="Gallery/_DSC9045.jpg" alt="Snow" > </div>
+        <div><img style="height: 300px; width: 410px; padding: 10px;" src="Gallery/_DSC8968.jpg" alt="Snow" > </div>
+        <div><img style="height: 300px; width: 410px; padding: 10px;" src="Gallery/_DSC8999.jpg" alt="Snow" > </div>
+        <div><img style="height: 300px; width: 410px; padding: 10px;" src="Gallery/_DSC9001.jpg" alt="Snow" > </div>
+        <div><img style="height: 300px; width: 410px; padding: 10px;" src="Gallery/_DSC9045.jpg" alt="Snow" > </div>
+        <div><img style="height: 300px; width: 410px; padding: 10px;" src="Gallery/_DSC9077.jpg" alt="Snow" > </div>
+        <div><img style="height: 300px; width: 410px; padding: 10px;" src="Gallery/28bd0fe3-e4cb-410d-a197-dc31a1a09401.JPG" alt="Snow" > </div>
+        <div><img style="height: 300px; width: 410px; padding: 10px;" src="Gallery/Drive Master Logo.jpg" alt="Snow" > </div>
+        <div><img style="height: 300px; width: 410px; padding: 10px;" src="Gallery/i.jpg" alt="Snow" >  </div>
+      </div>
 
 
+</body>
+<footer>
+    <p class="logo">Driving <span>Masters</span></p>
+    <p class="logo"><span>Email: </span> info@drivingmasters.co.za
+    <br>
+    <span>Tel: </span> 0722779590
+    <br>
+    <span>Tel: </span> 0833072491
+    <br>
+    <span>Address: </span> Rietvlei Farm, 101 Swartkoppies Road, Alberton, 1448
+    </p>
 
-{% block body %}
+    <p class="end"> CopyRight by Driving Masters</p>
+  
+  
+  </footer>
 
-<br>
-    
-    <div>
-        
-        {% for post in image %}
-        <img id="myImg" class = "mx-10 rounded-xl" src="{{ post.image1.url }}" alt="Snow" style="width:100%;max-width:450px">
-        <img id="myImg" class = "mx-10 rounded-xl" src="{{ post.image2.url }}" alt="Snow" style="width:100%;max-width:450px">
-        <img id="myImg" class = "mx-10 rounded-xl" src="{{ post.image3.url }}" alt="Snow" style="width:100%;max-width:450px">
-        <img id="myImg" class = "mx-10 rounded-xl" src="{{ post.image4.url }}" alt="Snow" style="width:100%;max-width:450px">
-        <img id="myImg" class = "mx-10 rounded-xl" src="{{ post.image5.url }}" alt="Snow" style="width:100%;max-width:450px">
-        <img id="myImg" class = "mx-10 rounded-xl" src="{{ post.image6.url }}" alt="Snow" style="width:100%;max-width:450px">
-        <img id="myImg" class = "mx-10 rounded-xl" src="{{ post.image7.url }}" alt="Snow" style="width:100%;max-width:450px">
-        <img id="myImg" class = "mx-10 rounded-xl" src="{{ post.image8.url }}" alt="Snow" style="width:100%;max-width:450px">
-        <img id="myImg" class = "mx-10 rounded-xl" src="{{ post.image9.url }}" alt="Snow" style="width:100%;max-width:450px">
-    
-        {% endfor %}
-
-        <div id="myModal" class="modal">
-
-            <span class="close">&times;</span>
-        
-            <img class="modal-content" id="img01">
-        
-            <div id="caption"></div>
-            </div>
-
-        
-
-
-    </div>
-
-    
-{% endblock %}
-{% include 'components/footer.html' %}
+</html>
