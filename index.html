@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Home</title>
+</head>
+<body>
+ {% load static %}
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/x-icon" href="{% static 'img/favicon.ico' %}">
+  
+
+ 
+ <div class="hero">
+   {% include 'components/navbar.html' %}
+   <img src="{{wp.image.url}}" alt="Snow"  style="float:right" width="600" height="600"  />
+   
+
+   <div class="content">
+     <h4>Hello , we are</h4>
+     <h2 class="logo">Driving<span>Masters</span> </h2>
+     <h2>K53 Driving Academy</h2>
+
+     <h3>We are a driving school</h3>
+     
+   </div>
+ </div>
+<!--About Section-->
+ <section class="about">
+   <div class="main">
+     <img src="{{bg.image.url}}" alt="Snow" >    
+       <div class="about-text">
+         <h2>About Us</h2>
+         <h5>Driving <span>Masters</span></h5>
+         <p>We are a driving school based at Rietvlei farm in Alberton. 
+           <br>
+           We help to equip potential new drivers with driving skills in 
+           various codes by offering driving lessons. We also offer
+           simulator training, refresher driver training and help with 
+           learners license 
+         </p>
+         <a class="button" href="{% url 'services:get-services-page' %}">Read More</a>
+
+     </div>
+   </div>
+ </section>
+
+ <!--Services section-->
+
+ <div class="service">
+   <div class="title">
+     <h2>Our Services</h2>
+   </div>
+
+   <div class="box">
+     <div class="card">
+       <h5>Learner Driver</h5>
+       <div class="pra">
+         <p>
+           We offer a learner driver education course to
+           educate candidates on road rules, signs and
+           driver responsibilities.
+
+         </p>
+
+            <p style="text-align: center;">
+            <a class="button" href="{% url 'services:get-services-page' %}">Read More</a>
+             </p>
+       </div>
+     </div> 
+
+     <div class="card">
+       <h5>Driving Lessons</h5>
+       <div class="pra">
+         <p>
+           We offer driving lessons for Code B ,
+           Code EB and for 
+           light motor vehicle towing a 
+           trailer exceeding 750Kg
+         </p>
+
+            <p style="text-align: center;">
+            <a class="button" href="{% url 'services:get-services-page' %}">Read More</a>
+             </p>
+       </div>
+     </div> 
+     <div class="card">
+       <h5>Instructor Courses</h5>
+       <div class="pra">
+         <p>
+           These courses are to train candidates 
+           who desire
+           to become light motor vehicle driving 
+           instructors
+
+         </p>
+
+            <p style="text-align: center;">
+            <a class="button" href="{% url 'services:get-services-page' %}">Read More</a>
+             </p>
+       </div>
+     </div> 
+
+   </div>
+
+ </div>
+
+ <!--Contacts Section-->
+ <div class="contact-us">
+   <p>Allow us to be at your service</p>
+   <a class="button-two" href="{% url 'contacts:get-contacts-page' %}">Contact Us</a>
+   
+ </div>
+
+
+ {% include 'components/footer.html' %}
+</body>
+
+</html>

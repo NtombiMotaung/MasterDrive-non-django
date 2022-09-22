@@ -1,0 +1,58 @@
+{% include 'components/navbar.html' %}
+{% load static %}
+
+
+{% block styles %}
+<title>Gallery</title>
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+<link rel="icon" type="image/x-icon" href="{% static 'img/favicon.ico' %}">
+<!-- <link rel="stylesheet" href="{% static 'js/style.js' %}"> -->
+
+<style>
+   body {
+  background-color: #000;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;      
+}
+  
+</style>
+{% endblock %}
+
+
+
+{% block body %}
+
+<br>
+    
+    <div>
+        
+        {% for post in image %}
+        <img id="myImg" class = "mx-10 rounded-xl" src="{{ post.image1.url }}" alt="Snow" style="width:100%;max-width:450px">
+        <img id="myImg" class = "mx-10 rounded-xl" src="{{ post.image2.url }}" alt="Snow" style="width:100%;max-width:450px">
+        <img id="myImg" class = "mx-10 rounded-xl" src="{{ post.image3.url }}" alt="Snow" style="width:100%;max-width:450px">
+        <img id="myImg" class = "mx-10 rounded-xl" src="{{ post.image4.url }}" alt="Snow" style="width:100%;max-width:450px">
+        <img id="myImg" class = "mx-10 rounded-xl" src="{{ post.image5.url }}" alt="Snow" style="width:100%;max-width:450px">
+        <img id="myImg" class = "mx-10 rounded-xl" src="{{ post.image6.url }}" alt="Snow" style="width:100%;max-width:450px">
+        <img id="myImg" class = "mx-10 rounded-xl" src="{{ post.image7.url }}" alt="Snow" style="width:100%;max-width:450px">
+        <img id="myImg" class = "mx-10 rounded-xl" src="{{ post.image8.url }}" alt="Snow" style="width:100%;max-width:450px">
+        <img id="myImg" class = "mx-10 rounded-xl" src="{{ post.image9.url }}" alt="Snow" style="width:100%;max-width:450px">
+    
+        {% endfor %}
+
+        <div id="myModal" class="modal">
+
+            <span class="close">&times;</span>
+        
+            <img class="modal-content" id="img01">
+        
+            <div id="caption"></div>
+            </div>
+
+        
+
+
+    </div>
+
+    
+{% endblock %}
+{% include 'components/footer.html' %}
